@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-df = pd.read_csv('ufo_sightings.csv',low_memory=False)
+df = pd.read_csv('../ufo_sightings.csv', low_memory=False)
 
 
 

@@ -1,7 +1,7 @@
 import pandas as pd
 import folium
 
-df = pd.read_csv('ufo_sightings.csv',low_memory=False)
+df = pd.read_csv('../ufo_sightings.csv', low_memory=False)
 
 df["latitude"] = pd.to_numeric(df["latitude"],errors='coerce')
 df["longitude"] = pd.to_numeric(df["longitude"],errors='coerce')
@@ -20,4 +20,4 @@ for index, row in df.iterrows():
         color="red",
     ).add_to(ufo_map)
 
-    ufo_map.save("ufo_map.html")
+ufo_map.save("ufo_map.html")

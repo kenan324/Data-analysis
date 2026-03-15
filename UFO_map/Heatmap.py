@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 
-df = pd.read_csv('ufo_sightings.csv' ,low_memory=False)
+df = pd.read_csv('../ufo_sightings.csv', low_memory=False)
 
 df["latitude"] = pd.to_numeric(df["latitude"], errors='coerce')
 df["longitude"] = pd.to_numeric(df["longitude"], errors='coerce')
@@ -19,7 +19,7 @@ plt.hexbin(
     mincnt=1,
 )
 plt.colorbar(label="Sightings density")
-plt.title("UFO Sightings Denssity Heatmap")
+plt.title("UFO Sightings Density Heatmap")
 plt.xlabel("Latitude")
 plt.ylabel("Longitude")
 plt.show()
